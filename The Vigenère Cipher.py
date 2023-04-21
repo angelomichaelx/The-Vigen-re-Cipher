@@ -40,7 +40,15 @@ def encrypt(plaintext, key):
         for plaintext_char, key_char in zip(plaintext, padded_key):
             ciphertext += _encrypt_decrypt_char(plaintext_char, key_char)
         return ciphertext
+
     #decrypt method
+def decrypt(ciphertext, key):
+        plaintext = ''
+        padded_key = _pad_key(ciphertext, key)
+        for ciphertext_char, key_char in zip(ciphertext, padded_key):
+            plaintext += _encrypt_decrypt_char(ciphertext_char, key_char, mode='decrypt')
+        return plaintext    
+
     #Ask the user to input a message and key
     #print output with decor
     #program if you want to repeat it again
