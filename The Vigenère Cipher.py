@@ -50,5 +50,10 @@ def decrypt(ciphertext, key):
         return plaintext    
 
     #Ask the user to input a message and key
+plain_text = input('Enter a message (all uppercase letters, no spaces): ')
+key = input('Enter a key (all uppercase letters): ')
+
+ciphertext = encrypt(plain_text, key)
+decrypted_plaintext = decrypt(ciphertext, key)
     #print output with decor
     #program if you want to repeat it again
