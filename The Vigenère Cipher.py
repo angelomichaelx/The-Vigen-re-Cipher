@@ -56,4 +56,8 @@ key = input('Enter a key (all uppercase letters): ')
 ciphertext = encrypt(plain_text, key)
 decrypted_plaintext = decrypt(ciphertext, key)
     #print output with decor
+print("\033[1;36m" +"=" * 20)
+print(f'Encrypted message: {ciphertext}')
+print(f'Decrypted message: {decrypted_plaintext}')
+print("=" * 20)
     #program if you want to repeat it again
