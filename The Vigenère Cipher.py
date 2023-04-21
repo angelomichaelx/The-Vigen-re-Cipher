@@ -7,6 +7,13 @@ def main():
         padded_key = ''
         i = 0
 #loop over the characters of the plain text
+for char in plaintext:
+            if char.isalpha():
+                padded_key += key[i % len(key)]
+                i += 1
+            else:
+                padded_key += ' '
+        return padded_key
 #implementing the encrtypt and decrypt method
 #subctracting the position of the first alphabet letter from the position of the plain text character
 #encrypt method
